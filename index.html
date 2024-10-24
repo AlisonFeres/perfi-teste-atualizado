@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8d7da;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            color: #721c24;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #dc3545;
+        }
+
+        .info {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #721c24;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #dc3545;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #c82333;
+            transform: translateY(-2px);
+        }
+
+        .history {
+            margin-top: 30px;
+        }
+
+        .history-item {
+            background: #f8d7da;
+            border: 1px solid #dc3545;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .contact-name {
+            color: #dc3545;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Perfil do Usuário</h1>
+        <div class="form-group">
+            <label>Nome:</label>
+            <div class="info">João da Silva</div>
+        </div>
+        <div class="form-group">
+            <label>E-mail:</label>
+            <div class="info">joao.silva@email.com</div>
+        </div>
+        <div class="form-group">
+            <label>Endereço:</label>
+            <div class="info">Rua das Flores, 123, São Paulo, SP</div>
+        </div>
+        <div class="form-group">
+            <label>Número de Telefone:</label>
+            <div class="info">(11) 98765-4321</div>
+        </div>
+        <div class="form-group">
+            <label>Tipo Sanguíneo:</label>
+            <div class="info">O+</div>
+        </div>
+        <button type="submit">Atualizar Informações</button>
+
+        <div class="history">
+            <h2>Histórico de Chamadas</h2>
+            <div class="history-item">
+                <strong>Data:</strong> 01/10/2024<br>
+                <strong>Hora:</strong> 14:30<br>
+                <strong>Contato:</strong> <span class="contact-name">Polícia</span><br>
+                <strong>Status:</strong> Concluída
+            </div>
+            <div class="history-item">
+                <strong>Data:</strong> 30/09/2024<br>
+                <strong>Hora:</strong> 09:15<br>
+                <strong>Contato:</strong> <span class="contact-name">Bombeiro</span><br>
+                <strong>Status:</strong> Perdida
+            </div>
+            <div class="history-item">
+                <strong>Data:</strong> 28/09/2024<br>
+                <strong>Hora:</strong> 11:00<br>
+                <strong>Contato:</strong> <span class="contact-name">Polícia Militar</span><br>
+                <strong>Status:</strong> Concluída
+            </div>
+            <div class="history-item">
+                <strong>Data:</strong> 30/09/2024<br>
+                <strong>Hora:</strong> 15:15<br>
+                <strong>Contato:</strong> <span class="contact-name">SAMU</span><br>
+                <strong>Status:</strong> Concluída
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('profileForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Informações atualizadas com sucesso!');
+        });
+    </script>
+</body>
+</html>
